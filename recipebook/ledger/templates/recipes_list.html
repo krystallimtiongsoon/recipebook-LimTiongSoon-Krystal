@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Recipes List</h1>
+<h2>Recipes List</h2>
 
 {% for recipe in recipes %}
-    <h2>{{ recipe.name }}</h2>
+    <h3>{{ recipe.name }}</h3>
     <ul>
         {% for ingredient in recipe.ingredients %}
             <li>{{ ingredient.name }}, {{ ingredient.quantity }}</li>
