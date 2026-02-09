@@ -2,8 +2,6 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-from django.views.generic.base import TemplateView
-
 def recipes_list(request):
     ctx = {
             "recipes": [
@@ -70,3 +68,32 @@ def recipes_list(request):
         ]
     }
     return render(request,'recipes_list.html', ctx)
+
+def recipe_1(request):
+    ctx = {
+            "name": "Recipe 1",
+            "ingredients": [
+            {
+                "name": "tomato",
+                "quantity": "3pcs"
+            },
+            {
+                "name": "onion",
+                "quantity": "1pc"
+            },
+            {
+                "name": "pork",
+                "quantity": "1kg"
+            },
+            {
+                "name": "water",
+                "quantity": "1L"
+            },
+            {
+                "name": "sinigang mix",
+                "quantity": "1 packet"
+            }
+        ],
+        "link": "/recipe/1"
+    }
+    return render(request,'recipe_1.html', ctx)

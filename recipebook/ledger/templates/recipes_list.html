@@ -7,10 +7,10 @@
     <h2>{{ recipe.name }}</h2>
     <ul>
         {% for ingredient in recipe.ingredients %}
-            <li>{{ ingredient.name}}, {{ ingredient.quantity }}</li>
-            {% endfor %}
+            <li>{{ ingredient.name }}, {{ ingredient.quantity }}</li>
+        {% endfor %}
     </ul>
-    <p><a href={{ recipe.link }}>Go To Recipe</a></p>
-    {% endfor %}
+    <p><a href=..{{ recipe.link }}>Go To Recipe</a></p>
+{% endfor %}
 
 {% endblock %}
