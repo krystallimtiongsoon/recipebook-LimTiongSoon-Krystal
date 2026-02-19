@@ -1,0 +1,3 @@
+djangoenv/
+.env
+db.sqlite3
