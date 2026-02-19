@@ -4,7 +4,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
-from .models import Ingredient, Recipe
+from .models import Recipe
 
 # def recipes_list(request):
 #     ctx = {
@@ -140,7 +140,7 @@ from .models import Ingredient, Recipe
 #     return render(request, 'recipe_2.html', ctx)
 
 class RecipeDetailView(DetailView):
-    model = Ingredient
+    model = Recipe
     template_name = "recipe_details.html"
 
 class RecipesListView(ListView):
