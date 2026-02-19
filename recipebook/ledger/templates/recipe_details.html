@@ -5,7 +5,7 @@
 
 <ul>
 {% for ingredient in object.ingredients.all %}
-    <li>{{ ingredient.name }}, {{ ingredient.quantity }}</li>
+    <li>{{ ingredient.ingredient.name }}, {{ ingredient.quantity }}</li>
 {% endfor %}
 </ul>
 
