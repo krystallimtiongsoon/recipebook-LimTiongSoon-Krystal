@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
+{% block page_heading %}
+    {{ object.name }} Recipe
+{% endblock %}
+
 {% block content %}
-<h2>{{ name }}</h2>
 <p>Author: {{ object.author }}</p>
 <ul>
 {% for ingredient in object.ingredients.all %}
