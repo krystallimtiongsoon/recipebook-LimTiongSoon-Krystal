@@ -6,14 +6,15 @@ class RecipeInline(admin.TabularInline):
     model = RecipeIngredient
 
 
+class RecipeImageInline(admin.TabularInline):
+    model = RecipeImage
+    list_display = ['recipe', 'recipe_image']
+
+
 class RecipeAdmin(admin.ModelAdmin):
     model = Recipe
-    inlines = [RecipeInline,]
+    inlines = [RecipeInline, RecipeImageInline]
     search_fields = ('name',)
-
-
-class RecipeImageAdmin(admin.ModelAdmin):
-    model = RecipeImage
 
 
 admin.site.register(Recipe, RecipeAdmin)

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block page_heading %}
     {{ object.name }} Recipe
@@ -13,15 +12,12 @@
 {% endfor %}
 </ul>
 
-<form action="POST" enctype="multipart/form-data"></form>
-<a href="{% url 'ledger:add-image' pk=object.pk %}">Add Image</a>
 
-
-{% for image in object.images.all %}
-    <img src="{{ image.recipe_image.url }}" alt="{{ image.description }}">
+{% for image in recipe.images.all %}
+    <img src="{{ image.image.url }}" alt="{{ image.description }}">
 {% endfor %}
 
 
-<a href="{% url 'ledger:recipes/list' %}">Back to Recipe List</a>
+<a href="{% url 'ledger:image_add' pk=object.pk %}">Add Image</a>
 
 {% endblock %}
